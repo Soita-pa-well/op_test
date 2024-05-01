@@ -20,7 +20,7 @@ gauth.SaveCredentialsFile('credentials.txt')
 
 
 @csrf_exempt
-def create_google_drive_document(request):
+def create_document(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body.decode('utf-8'))

@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path
 
-from api import views
+from api.views import create_document
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', views.create_google_drive_document)
+    path('api/', create_document)
 ]
