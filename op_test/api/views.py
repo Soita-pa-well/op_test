@@ -8,13 +8,10 @@ from pydrive.drive import GoogleDrive
 gauth = GoogleAuth()
 gauth.LoadCredentialsFile("mycreds.txt")
 if gauth.credentials is None:
-    print('1')
     gauth.LocalWebserverAuth()
 elif gauth.access_token_expired:
-    print('2')
     gauth.Refresh()
 else:
-    print('3')
     gauth.Authorize()
 gauth.SaveCredentialsFile('credentials.txt')
 
